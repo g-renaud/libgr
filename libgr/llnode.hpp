@@ -1,72 +1,81 @@
 #ifndef LLNODE_HPP
 #define LLNODE_HPP
-
 namespace gr
 {
-	template<typename AnyType> class llnode
+	template<typename T>
+	class LLNode
 	{
 		private:
-			AnyType _data;
-			llnode<AnyType>* _prev;
-			llnode<AnyType>* _next;
+			T _data;
+			LLNode<T>* _prev;
+			LLNode<T>* _next;
 
 		public:
-			llnode(void);
-			llnode(AnyType);
-			~llnode(void);
-			void setData(AnyType);
-			void setPrev(llnode*);
-			void setNext(llnode*);
-			AnyType getData(void);
-			llnode<AnyType>* getPrev(void);
-			llnode<AnyType>* getNext(void);
+			LLNode(void);
+			LLNode(T);
+			~LLNode(void);
+			void setData(T);
+			void setPrev(LLNode*);
+			void setNext(LLNode*);
+			T getData(void);
+			LLNode<T>* getPrev(void);
+			LLNode<T>* getNext(void);
 	};
 
-	template<typename AnyType> llnode<AnyType>::llnode(void) : _prev(nullptr), _next(nullptr)
+	template<typename T>
+	LLNode<T>::LLNode(void) : _prev(nullptr), _next(nullptr)
+	{
+		
+	}
+
+	template<typename T>
+	LLNode<T>::LLNode(T d) : _prev(nullptr), _next(nullptr), _data(d)
 	{
 
 	}
 
-	template<typename AnyType> llnode<AnyType>::llnode(AnyType data) : _prev(nullptr), _next(nullptr), _data(data)
+	template<typename T>
+	LLNode<T>::~LLNode(void)
 	{
-
+		this->_prev = nullptr;
+		this-> _next = nullptr;
 	}
 
-	template<typename AnyType> llnode<AnyType>::~llnode(void)
+	template<typename T>
+	void LLNode<T>::setData(T d)
 	{
-
+		this->_data = d;
 	}
 
-	template<typename AnyType> void llnode<AnyType>::setData(AnyType data)
+	template<typename T>
+	void LLNode<T>::setPrev(LLNode* p)
 	{
-		this->_data = data;
+		this->_prev = p;
 	}
 
-	template<typename AnyType> void llnode<AnyType>::setPrev(llnode* prev)
+	template<typename T>
+	void LLNode<T>::setNext(LLNode* n)
 	{
-		this->_prev = prev;
+		this->_next = n;
 	}
 
-	template<typename AnyType> void llnode<AnyType>::setNext(llnode* next)
-	{
-		this->_next = next;
-	}
-
-	template<typename AnyType> AnyType llnode<AnyType>::getData(void)
+	template<typename T>
+	T LLNode<T>::getData(void)
 	{
 		return this->_data;
 	}
 
-	template<typename AnyType> llnode<AnyType>* llnode<AnyType>::getPrev(void)
+	template<typename T>
+	LLNode<T>* LLNode<T>::getPrev(void)
 	{
 		return this->_prev;
 	}
 
-	template<typename AnyType> llnode<AnyType>* llnode<AnyType>::getNext(void)
+	template<typename T>
+	LLNode<T>* LLNode<T>::getNext(void)
 	{
 		return this->_next;
 	}
 }
-
 #endif // !LLNODE_HPP
 

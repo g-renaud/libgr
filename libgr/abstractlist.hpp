@@ -1,27 +1,14 @@
 #ifndef ABSTRACTLIST_HPP
 #define ABSTRACTLIST_HPP
 #include "abstractcollection.hpp"
-
 namespace gr
 {
-	template<typename AnyItem> class AbstractList : public AbstractCollection<AnyItem> // AnyItem are nodes of AnyType
+	template<typename E>
+	class AbstractList : public AbstractCollection<E> // E are nodes of T
 	{
 		protected:
-			unsigned int _modCount;
-			AbstractList(void);
-			~AbstractList(void);
+			
 	};
-
-	template<typename AnyItem> AbstractList<AnyItem>::AbstractList(void) : _modCount(0)
-	{
-
-	}
-
-	template<typename AnyItem> AbstractList<AnyItem>::~AbstractList(void)
-	{
-
-	}
 }
-
 #endif // !ABSTRACTLIST_HPP
 
