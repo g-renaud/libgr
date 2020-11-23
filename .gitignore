@@ -355,5 +355,8 @@ MigrationBackup/
 # Project filters and files
 *.vcxproj*
 
+# Main
+main*
+
 # Test project
 testproject/
