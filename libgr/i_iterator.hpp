@@ -6,7 +6,7 @@
  * of the derived classes of the elements in the collection. For example, a
  * collection of shapes (superclass) can contain squares (derived class) and
  * triangles (derived class). Any iterator implemented with this interface
- * will be capable of iterating on a such a collection, like the above example
+ * will be capable of iterating on a such a collection, like the above example.
  *
  * Copyright 2019, 2020 (c) Guillaume Renaud
  *

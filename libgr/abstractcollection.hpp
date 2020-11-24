@@ -1,3 +1,19 @@
+/*
+ * This file is part of the libgr
+ *
+ * This abstract class provides basic functionalities for operating on any
+ * iterable collection that derives this abstract class. Functionalities for
+ * specific types of collections should be implemented in derived classes by
+ * using these basic functionalities, plus any necessary instructions proper
+ * to those derived classes. For example, a linked list should use this add
+ * method for initializing the node to be added and updating the counts for
+ * the size and the number of modifications of that linked list, but the
+ * instructions for linking those nodes between them should remain in the
+ * linked list class that derives this abstract class.
+ *
+ * Copyright 2019, 2020 (c) Guillaume Renaud
+ *
+ */
 #ifndef ABSTRACTCOLLECTION_HPP
 #define ABSTRACTCOLLECTION_HPP
 #include "i_collection.hpp"
